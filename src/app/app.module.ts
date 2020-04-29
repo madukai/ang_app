@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FibService } from './fib.service';
+import { FibModComponent } from './fib-mod/fib-mod.component';
+import { ViewComponent } from './view/view.component';
+import { BoxColorComponent } from './box-color/box-color.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FibModComponent,
+    ViewComponent,
+    BoxColorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    FibService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

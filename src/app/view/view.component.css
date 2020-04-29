@@ -1,0 +1,16 @@
+#view-content {
+    margin: 10px;
+    margin-top: 40px;
+    width: 350px;
+}
+
+.box-label {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.base-box {
+    background-color: blueviolet;
+    height: 150px;
+}
