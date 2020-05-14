@@ -26,5 +26,4 @@ export class ViewComponent implements OnInit {
       this.boxColor = data;
     });
   }
-
 }

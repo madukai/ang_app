@@ -2,5 +2,6 @@
   <h4>View component</h4>
   <div class="result">Result: {{result}}</div>
   <div class="box-label">Change box color:</div>
-  <div class="base-box" [ngStyle]="{'background-color': boxColor }"></div>
+  <div class="base-box" [ngStyle]="{ 'background-color': boxColor }"></div>
+  <app-svg-mod [colorData]="boxColor"></app-svg-mod>
 </div>

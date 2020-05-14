@@ -7,13 +7,15 @@ import { FibService } from './fib.service';
 import { FibModComponent } from './fib-mod/fib-mod.component';
 import { ViewComponent } from './view/view.component';
 import { BoxColorComponent } from './box-color/box-color.component';
+import { SvgModComponent } from './svg-mod/svg-mod.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FibModComponent,
     ViewComponent,
-    BoxColorComponent
+    BoxColorComponent,
+    SvgModComponent
   ],
   imports: [
     BrowserModule,
