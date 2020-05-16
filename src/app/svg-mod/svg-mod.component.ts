@@ -10,25 +10,41 @@ export class SvgModComponent implements OnInit {
 	@Input() colorData: string;
     strokeColor: string;
     strokeWidth: number;
-    cRadius: string;
-    goBig: boolean;  
+    cRadius: number;
+    goBig: boolean;
+    timeOutHandler: any;
 
   	constructor() { 
 		this.strokeColor = "yellow";
-        this.cRadius = "20";
+        this.cRadius = 20;
         this.strokeWidth = 4;
         this.goBig = true;
+        this.timeOutHandler = 0;
   	}
 
-  	clickSVGCircle() {
-    	if (this.cRadius === "45") {
-      		this.cRadius = "20";
-    	} else {
-      		this.cRadius = "45";
-    	}
+  	clickSVGCircle(e) {
+        if (this.cRadius === 20) {
+            this.cRadius = 45;
+        } else {
+            this.cRadius = 20;
+        }
   	}
 
   	SVGPolygon(e) {
+        // Mouse down
+        if (e.type === 'mousedown') {
+            // use setinterval to repeat calling
+            this.timeOutHandler = setInterval(() => {
+                this.manipulatePolygon();
+            }, 100);
+        } else if (e.type === 'mouseup') {
+            // cancel setinterval
+            clearInterval(this.timeOutHandler);
+            this.timeOutHandler = 0;
+        }
+    }
+
+    manipulatePolygon() {
         // increase border of polygon
         if (this.goBig === true) {
             if (this.strokeWidth < 21) {

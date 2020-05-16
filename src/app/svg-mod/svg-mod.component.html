@@ -3,13 +3,15 @@
   <svg width="400" height="250">
     <circle class="svg-circle" cx="50" cy="50" [attr.r]=cRadius 
         [attr.stroke]=strokeColor stroke-width="4" 
-        [attr.fill]=colorData (click)="clickSVGCircle()"
+        [attr.fill]=colorData 
+        (click)="clickSVGCircle($event)"
     />
     <polygon class="svg-polygon" 
         points="120,10 220,10 220,100 120,100"
         [attr.stroke-width]=strokeWidth
         [attr.stroke]=strokeColor [attr.fill]=colorData 
-        (click)="SVGPolygon($event)"
+        (mousedown)="SVGPolygon($event)"
+        (mouseup)="SVGPolygon($event)"
     />
     Sorry, your browser does not support inline SVG.
   </svg>
