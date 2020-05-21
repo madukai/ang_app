@@ -1,0 +1,10 @@
+<div id="svg-path-content">
+    <div class="button-area">
+        <button class="draw-button" (click)="drawSVGPath()">DRAW</button>
+    </div>
+    <div class="draw-area">
+        <svg class="svg-area" height="750" width="720">
+            <polyline [attr.points]="pathPts" />
+        </svg>
+    </div>
+</div>

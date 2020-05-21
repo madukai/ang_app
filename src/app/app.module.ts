@@ -8,6 +8,7 @@ import { FibModComponent } from './fib-mod/fib-mod.component';
 import { ViewComponent } from './view/view.component';
 import { BoxColorComponent } from './box-color/box-color.component';
 import { SvgModComponent } from './svg-mod/svg-mod.component';
+import { SvgPathComponent } from './svg-path/svg-path.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SvgModComponent } from './svg-mod/svg-mod.component';
     FibModComponent,
     ViewComponent,
     BoxColorComponent,
-    SvgModComponent
+    SvgModComponent,
+    SvgPathComponent
   ],
   imports: [
     BrowserModule,

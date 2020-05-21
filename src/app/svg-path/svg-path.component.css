@@ -1,0 +1,38 @@
+#svg-path-content {
+    margin-top: 135px;
+    height: 700px;
+    width: 750px;
+}
+
+.draw-button {
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:1em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:600;
+    font-size: 1.2em;
+    color:#f1ff00;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.draw-button:hover {
+    background-color:#4095c6;
+}
+
+.draw-area {
+    padding: 10px;
+    height: 100%;
+    border: 2px solid darkblue;
+}
+
+.svg-area > polyline {
+    fill:none;
+    stroke:#fcba03;
+    stroke-width:3;
+}
+
