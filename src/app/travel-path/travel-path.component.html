@@ -3,7 +3,7 @@
     <div class="draw-area">
         <svg class="svg-draw-area" height="750" width="1330">
             <path [attr.d]="svgPathPt" stroke-width="2" class="path-line"/>
-            <circle [attr.cx]="circlePathInfo.currentPosition.x" [attr.cy]="circlePathInfo.currentPosition.y" [attr.r]="circleRadius" class="circleObject"/>
+            <circle [attr.cx]="cirX" [attr.cy]="cirY" [attr.r]="circleRadius" class="circleObject"/>
         </svg>
     </div>
 </div>

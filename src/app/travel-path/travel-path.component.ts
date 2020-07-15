@@ -7,18 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TravelPathComponent implements OnInit {
+    public circleRadius: number;
+    public buttonLabel: string;
+    public svgPathPt: string;
 
-    public circlePathInfo: object = {
+    public cirX: number;
+    public cirY: number;
+
+    private runApp: boolean;
+    private speed: number;
+    private circlePathInfo: object = {
         currentPosition: {x:10, y:10},
         destinationPts: [{x:10, y:10}, {x:500, y:500}, {x:800, y:500}, {x:800 ,y:180}],
         currentPtIndex: 1
     }
-    public circleRadius: Number;
-    public buttonLabel: string;
-    public svgPathPt: string;
-
-    private runApp: boolean;
-    private speed: number;
 
     constructor() {
         this.circleRadius = 12;
@@ -26,10 +28,11 @@ export class TravelPathComponent implements OnInit {
         this.runApp = false;
         this.speed = 3;
         this.svgPathPt = '';
+        this.cirX = 10;
+        this.cirY = 10;
     }
 
     ngOnInit() {
-        console.log('Init on run');
         this.SVGPathPoints();
     }
 
@@ -54,6 +57,8 @@ export class TravelPathComponent implements OnInit {
     travelCircle() {
         if (this.runApp === true) {
             this.circleTravelPath(this.circlePathInfo);
+            this.cirX = this.circlePathInfo['currentPosition'].x;
+            this.cirY = this.circlePathInfo['currentPosition'].y;
             requestAnimationFrame((time) => this.travelCircle());
         }
     }
@@ -66,8 +71,6 @@ export class TravelPathComponent implements OnInit {
         for (let i = 1; i < this.circlePathInfo['destinationPts'].length; i++) {
             this.svgPathPt += ` L${this.circlePathInfo['destinationPts'][i].x} ${this.circlePathInfo['destinationPts'][i].y}`
         }
-
-        console.log(this.svgPathPt);
     }
     
 
@@ -79,7 +82,6 @@ export class TravelPathComponent implements OnInit {
    * @param pathInfo {object}
    */
     circleTravelPath(pathInfo) {
-        
         let i = pathInfo.currentPtIndex;
         let dx = pathInfo.destinationPts[i].x - pathInfo.currentPosition.x;
         let dy = pathInfo.destinationPts[i].y - pathInfo.currentPosition.y;
