@@ -1,8 +1,8 @@
-#app-main {
-    float: left;
+#navi-link {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#mid-content {
-    float: left;
+#navi-link > a {
     margin-left: 20px;
 }

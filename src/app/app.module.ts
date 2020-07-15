@@ -9,6 +9,8 @@ import { ViewComponent } from './view/view.component';
 import { BoxColorComponent } from './box-color/box-color.component';
 import { SvgModComponent } from './svg-mod/svg-mod.component';
 import { SvgPathComponent } from './svg-path/svg-path.component';
+import { TravelPathComponent } from './travel-path/travel-path.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SvgPathComponent } from './svg-path/svg-path.component';
     ViewComponent,
     BoxColorComponent,
     SvgModComponent,
-    SvgPathComponent
+    SvgPathComponent,
+    TravelPathComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
