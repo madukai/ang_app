@@ -11,6 +11,7 @@ import { SvgModComponent } from './svg-mod/svg-mod.component';
 import { SvgPathComponent } from './svg-path/svg-path.component';
 import { TravelPathComponent } from './travel-path/travel-path.component';
 import { HomeComponent } from './home/home.component';
+import { MoveConnectComponent } from './move-connect/move-connect.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     SvgModComponent,
     SvgPathComponent,
     TravelPathComponent,
-    HomeComponent
+    HomeComponent,
+    MoveConnectComponent
   ],
   imports: [
     BrowserModule,

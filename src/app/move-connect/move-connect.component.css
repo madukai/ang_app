@@ -1,0 +1,29 @@
+.draw-area {
+    margin-top: 10px;
+}
+
+.app-inactive {
+    border: 10px solid silver;
+}
+
+.app-active {
+    border: 10px solid green;
+}
+
+.title-header {
+    margin-left: 10px;
+}
+
+.sPoly {
+    fill: none;
+    stroke-width: 5;
+}
+
+.svg-poly-line1 {
+    stroke: blueviolet;
+}
+
+
+.svg-poly-line2 {
+    stroke: cyan;
+}
