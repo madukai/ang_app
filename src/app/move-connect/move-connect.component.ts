@@ -55,7 +55,6 @@ export class MoveConnectComponent implements OnInit {
             this.isRun = !this.isRun;
             this.connectCompRun();
         }
-
         // w key
         if (ev.keyCode === 87) {
             this.connectionPts[1].y -= 1;
