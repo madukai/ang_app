@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { pathPointsData } from '../gencode/gencode';
 
 @Component({
   selector: 'app-travel-path',
@@ -20,7 +21,7 @@ export class TravelPathComponent implements OnInit {
     private doAccelerate: boolean;
     private circlePathInfo: object = {
         currentPosition: {x:0, y:0},
-        destinationPts: [{x:10, y:10}, {x:500, y:500}, {x:800, y:500}, {x:800 ,y:180}],
+        destinationPts: [],
         currentPtIndex: 1
     }
 
@@ -33,6 +34,7 @@ export class TravelPathComponent implements OnInit {
         this.cirX = 10;
         this.cirY = 10;
         this.doAccelerate = false;
+        this.circlePathInfo['destinationPts'] = pathPointsData;
         this.circlePathInfo['currentPosition'].x = this.circlePathInfo['destinationPts'][0].x;
         this.circlePathInfo['currentPosition'].y = this.circlePathInfo['destinationPts'][0].y;
     }

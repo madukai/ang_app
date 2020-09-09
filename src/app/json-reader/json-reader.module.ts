@@ -16,7 +16,7 @@ export class JsonReaderModule {
         this.coordList = coords.pointCoords;
     }
 
-    getCoords() {
+    getCoords(n) {
         return this.coordList;
     }
 }
