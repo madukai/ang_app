@@ -1,0 +1,15 @@
+<div id="main">
+  <div id="right">
+    Dyna-page works Left-side! <br /> 
+    Click on the any buttons below to display it's contents on the right side:
+    <ul class="btn-list">
+      <li><button (click)="loadDy1()">DynaOne</button></li>
+      <li><button (click)="loadDy2()">DynaTwo</button></li>
+      <li><button (click)="loadDy3()">DynaThree</button></li>
+    </ul>
+  </div>
+  <div id="left">
+    Dyna-page works Right-side!
+    <ng-template appRightSection></ng-template>
+  </div>
+</div>

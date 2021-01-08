@@ -1,0 +1,31 @@
+#main {
+    border: 2px blue solid;
+    padding: 5px;
+    height: 200px;
+}
+
+#right {
+    float: left;
+    border: 2px purple solid;
+    padding: 2px;
+    height: 95%;
+    width: 40%;
+}
+
+#right > .btn-list {
+    list-style: none;
+    padding: 4px;
+}
+
+#right > .btn-list > li {
+    padding: 4px;
+}
+
+#left {
+    float: left;
+    padding: 2px;
+    border: 2px red solid;
+    margin-left: 20px;
+    height: 95%;
+    width: 50%;
+}

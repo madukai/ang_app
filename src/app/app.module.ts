@@ -12,6 +12,11 @@ import { SvgPathComponent } from './svg-path/svg-path.component';
 import { TravelPathComponent } from './travel-path/travel-path.component';
 import { HomeComponent } from './home/home.component';
 import { MoveConnectComponent } from './move-connect/move-connect.component';
+import { DynaPageComponent } from './dyna-page/dyna-page.component';
+import { SubcomponentOneComponent } from './dyna-page/dyna-subcomponent/subcomponent-one.component';
+import { SubcomponentTwoComponent } from './dyna-page/dyna-subcomponent/subcomponent-two.component';
+import { SubcomponentThreeComponent } from './dyna-page/dyna-subcomponent/subcomponent-three.component';
+import { RightSectionDirective } from './common/RightSection.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,17 @@ import { MoveConnectComponent } from './move-connect/move-connect.component';
     SvgPathComponent,
     TravelPathComponent,
     HomeComponent,
-    MoveConnectComponent
+    MoveConnectComponent,
+    DynaPageComponent,
+    RightSectionDirective,
+    SubcomponentOneComponent,
+    SubcomponentTwoComponent,
+    SubcomponentThreeComponent
+  ],
+  entryComponents: [
+    SubcomponentOneComponent,
+    SubcomponentTwoComponent,
+    SubcomponentThreeComponent
   ],
   imports: [
     BrowserModule,
