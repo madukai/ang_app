@@ -3,6 +3,8 @@ import { SubcomponentOneComponent } from './dyna-subcomponent/subcomponent-one.c
 import { SubcomponentTwoComponent } from './dyna-subcomponent/subcomponent-two.component';
 import { SubcomponentThreeComponent } from './dyna-subcomponent/subcomponent-three.component';
 import { RightSectionDirective } from '../common/RightSection.directive';
+import { BottomCompComponent } from './dyna-bottom-subcomp/bottom-comp.component';
+import { BottomSectionDirective } from '../common/BottomSection.directive';
 
 @Component({
   selector: 'app-dyna-page',
@@ -12,12 +14,14 @@ import { RightSectionDirective } from '../common/RightSection.directive';
 export class DynaPageComponent implements OnInit {
 
   @ViewChild(RightSectionDirective) rightSection: RightSectionDirective;
+  @ViewChild(BottomSectionDirective) bottomSection: BottomSectionDirective;
 
   constructor(private resolver: ComponentFactoryResolver) {
 
   }
 
   ngOnInit() {
+    this.loadBottom();
   }
 
   loadDy1() {
@@ -39,6 +43,13 @@ export class DynaPageComponent implements OnInit {
     const componentFactory = this.resolver.resolveComponentFactory(SubcomponentThreeComponent);
     this.rightSection.viewRef.clear();
     this.rightSection.viewRef.createComponent(componentFactory);
+  }
+
+  loadBottom() {
+    console.log('Bottom component loaded');
+    const componentFactory = this.resolver.resolveComponentFactory(BottomCompComponent);
+    this.bottomSection.viewRef.clear();
+    this.bottomSection.viewRef.createComponent(componentFactory);
   }
 
 }

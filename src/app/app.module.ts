@@ -17,6 +17,8 @@ import { SubcomponentOneComponent } from './dyna-page/dyna-subcomponent/subcompo
 import { SubcomponentTwoComponent } from './dyna-page/dyna-subcomponent/subcomponent-two.component';
 import { SubcomponentThreeComponent } from './dyna-page/dyna-subcomponent/subcomponent-three.component';
 import { RightSectionDirective } from './common/RightSection.directive';
+import { BottomCompComponent } from './dyna-page/dyna-bottom-subcomp/bottom-comp.component';
+import { BottomSectionDirective } from './common/BottomSection.directive';
 
 @NgModule({
   declarations: [
@@ -31,14 +33,17 @@ import { RightSectionDirective } from './common/RightSection.directive';
     MoveConnectComponent,
     DynaPageComponent,
     RightSectionDirective,
+    BottomSectionDirective,
     SubcomponentOneComponent,
     SubcomponentTwoComponent,
-    SubcomponentThreeComponent
+    SubcomponentThreeComponent,
+    BottomCompComponent
   ],
   entryComponents: [
     SubcomponentOneComponent,
     SubcomponentTwoComponent,
-    SubcomponentThreeComponent
+    SubcomponentThreeComponent,
+    BottomCompComponent
   ],
   imports: [
     BrowserModule,
