@@ -27,29 +27,30 @@ export class DynaPageComponent implements OnInit {
   loadDy1() {
     console.log('Click Dyna one');
     const componentFactory = this.resolver.resolveComponentFactory(SubcomponentOneComponent);
-    this.rightSection.viewRef.clear();
-    this.rightSection.viewRef.createComponent(componentFactory);
+    this.rightSection.getViewRef().clear();
+    this.rightSection.getViewRef().createComponent(componentFactory);
   }
 
   loadDy2() {
     console.log('Click Dyna two');
     const componentFactory = this.resolver.resolveComponentFactory(SubcomponentTwoComponent);
-    this.rightSection.viewRef.clear();
-    this.rightSection.viewRef.createComponent(componentFactory);
+    this.rightSection.getViewRef().clear();
+    this.rightSection.getViewRef().createComponent(componentFactory);
   }
 
   loadDy3() {
     console.log('Click Dyna three');
     const componentFactory = this.resolver.resolveComponentFactory(SubcomponentThreeComponent);
-    this.rightSection.viewRef.clear();
-    this.rightSection.viewRef.createComponent(componentFactory);
+    this.rightSection.getViewRef().clear();
+    this.rightSection.getViewRef().createComponent(componentFactory);
   }
 
   loadBottom() {
     console.log('Bottom component loaded');
     const componentFactory = this.resolver.resolveComponentFactory(BottomCompComponent);
-    this.bottomSection.viewRef.clear();
-    this.bottomSection.viewRef.createComponent(componentFactory);
+    const btmViewRef = this.bottomSection.getViewRef();
+    btmViewRef.clear();
+    btmViewRef.createComponent(componentFactory);
   }
 
 }

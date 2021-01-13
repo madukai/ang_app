@@ -4,7 +4,11 @@ import { Directive, ViewContainerRef } from "@angular/core";
     selector: '[appBottomSection]'
 })
 export class BottomSectionDirective {
-    constructor(public viewRef: ViewContainerRef) {
+    constructor(private viewRef: ViewContainerRef) {
 
+    }
+
+    getViewRef() : ViewContainerRef {
+        return this.viewRef;
     }
 }
